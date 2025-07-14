@@ -1,0 +1,210 @@
+.admin-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f9fa;
+}
+
+.admin-navbar {
+  width: 220px;
+  background: #247150;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 40px 0;
+  min-height: 100vh;
+}
+
+.admin-navbar-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 32px 24px 24px 24px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #1bb76e33;
+}
+
+.admin-navbar-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.admin-navbar-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 24px;
+  font-size: 1.1em;
+  border-left: 4px solid transparent;
+  transition: background 0.18s, border-color 0.18s;
+  display: block;
+}
+
+.admin-navbar-link-active {
+  background: #1bb76e;
+  border-left: 4px solid #fff;
+  color: #fff !important;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 40px 32px;
+}
+
+.admin-dashboard {
+  margin-bottom: 40px;
+}
+
+.admin-dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.admin-dashboard-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #24715018;
+  padding: 32px 24px;
+  min-width: 180px;
+  flex: 1;
+  text-align: center;
+}
+
+.admin-dashboard-card-title {
+  font-size: 1.1em;
+  color: #247150;
+  margin-bottom: 10px;
+}
+
+.admin-dashboard-card-value {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #222;
+}
+
+.admin-table-page {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #24715018;
+  padding: 32px 24px;
+  margin-bottom: 40px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #f5f5f5;
+  color: #247150;
+  font-weight: 600;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hamburger styles for mobile navbars */
+.navbar-hamburger {
+  display: none;
+  background: #247150;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #0002;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .admin-navbar {
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: #247150;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 2px 0 16px #0003;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-navbar.open {
+    transform: translateX(0);
+  }
+  .admin-navbar-title {
+    padding: 32px 24px 24px 24px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #1bb76e33;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .navbar-hamburger {
+    display: flex;
+    color: #fff;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    left: auto;
+    z-index: 1100;
+    box-shadow: 0 2px 8px #0002;
+  }
+  .admin-navbar-menu {
+    flex-direction: column;
+    background: #247150;
+    width: 100%;
+    margin-top: 32px;
+    box-shadow: none;
+    min-height: calc(100vh - 60px);
+    justify-content: flex-start;
+    gap: 18px;
+  }
+  .admin-navbar-link {
+    padding: 14px 24px;
+    font-size: 1.08em;
+    border-left: none;
+    border-radius: 12px;
+    margin: 0 12px;
+    background: transparent;
+    border-bottom: none;
+    transition: background 0.18s;
+    text-align: left;
+  }
+  .admin-navbar-link-active {
+    background: #e0e0e0;
+    color: #247150 !important;
+    font-weight: 600;
+  }
+  .navbar-logout-btn {
+    font-size: 1em;
+    padding: 12px 32px;
+    margin: 32px 24px 24px 24px;
+    border-radius: 8px;
+    background: #e53935;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #e5393533;
+    width: calc(100% - 48px);
+    display: block;
+  }
+}

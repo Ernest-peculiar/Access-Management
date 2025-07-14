@@ -1,0 +1,132 @@
+/* SecurityDashboard.css - Modern, responsive, beautiful styles for the Security Dashboard */
+.security-dashboard-root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 48px 16px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+.security-dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #247150;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.security-dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.security-dashboard-card {
+  background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(36, 113, 80, 0.08);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.5px solid #e0e0e0;
+  cursor: pointer;
+}
+.security-dashboard-card:hover {
+  box-shadow: 0 6px 32px 0 rgba(36, 113, 80, 0.16);
+  transform: translateY(-2px) scale(1.02);
+}
+.security-dashboard-card .card-num {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #1bb76e;
+  margin-bottom: 8px;
+}
+.security-dashboard-card .card-label {
+  font-size: 1.1rem;
+  color: #247150;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.security-dashboard-scan-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(36, 113, 80, 0.08);
+  padding: 32px 24px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.security-dashboard-titlescan- {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1bb76e;
+  margin-bottom: 18px;
+}
+.security-dashboard-scan-camera {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px 0 rgba(36, 113, 80, 0.10);
+}
+.security-dashboard-scan-result {
+  margin-top: 12px;
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #247150;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px 0 rgba(36, 113, 80, 0.06);
+}
+.security-dashboard-scan-error {
+  margin-top: 12px;
+  background: #ffebee;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #c62828;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px 0 rgba(198, 40, 40, 0.06);
+}
+.security-dashboard-token-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.security-dashboard-token-input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #b2dfdb;
+  font-size: 1rem;
+  outline: none;
+  min-width: 180px;
+}
+.security-dashboard-token-btn {
+  background: linear-gradient(90deg, #1bb76e 60%, #247150 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.security-dashboard-token-btn:hover {
+  background: linear-gradient(90deg, #247150 60%, #1bb76e 100%);
+}
+@media (max-width: 600px) {
+  .security-dashboard-root {
+    padding: 12px 2px 32px 2px;
+  }
+  .security-dashboard-cards {
+    gap: 12px;
+  }
+  .security-dashboard-scan-section {
+    padding: 18px 6px;
+  }
+}

@@ -1,0 +1,178 @@
+body {
+  font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+
+
+.form-container {
+  background: #fff;
+  padding: 48px 80px 48px 80px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #247150;
+  margin-bottom: 40px;
+  text-align: left;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.form-input-group {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 18px 18px 18px 18px;
+  font-size: 1.18rem;
+  border: 1.5px solid #24715044;
+  border-radius: 8px;
+  background: #f8f8f8;
+  outline: none;
+  transition: border 0.2s;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.form-input:focus {
+  border: 1.5px solid #247150;
+  background: #fff;
+}
+
+.form-input-label {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #247150cc;
+  font-size: 1.08rem;
+  pointer-events: none;
+  transition: 0.18s;
+  background: transparent;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.form-input:focus + .form-input-label,
+.form-input:not(:placeholder-shown) + .form-input-label {
+  top: -15px;
+  left: 12px;
+  font-size: 0.95rem;
+  color: #247150;
+  background: #fff;
+  padding: 0 8px;
+}
+
+.form-btn {
+  width: 260px;
+  padding: 16px 0;
+  background: #247150;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.22rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin-top: 18px;
+  display: block;
+  margin-left: auto;
+}
+
+.form-btn:hover {
+  background: #1a4e38;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.fade-in {
+  opacity: 1;
+}
+
+.modal-overlay.fade-out {
+  opacity: 0;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 30px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  height: 30vh;
+  align-content: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 30px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  height: 30vh;
+  align-content: center;
+}
+
+.modal-box.slide-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-box.slide-out {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.modal-box p {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-box button {
+  padding: 8px 16px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal-box button:hover {
+  background: #0056b3;
+}
+
+.modal-success {
+  border-left: 5px solid #28a745;
+}
+
+.modal-error {
+  border-left: 5px solid #dc3545;
+}

@@ -1,0 +1,364 @@
+/* Microsoft Outlook style login/signup form styles */
+body {
+  font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.login-root {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+/* Set left to 20% and right to 80% */
+.login-left {
+  flex: 0 0 29%;
+  max-width: 29%;
+  background: rgba(40, 114, 80, 1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.login-title {
+  font-size: 27px;
+  font-weight: 1000;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 2.5rem;
+  margin-bottom: auto;
+  letter-spacing: 1px;
+  z-index: 2;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  word-break: break-word;
+  letter-spacing: -1px;
+  line-height: 1.9rem;
+  padding-top: 30px;
+}
+.login-3d-icon {
+  width: 1150px;
+  height: 903px;
+  object-fit: contain;
+  position: absolute;
+  left: 22%;
+  top: 60%;
+  
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.18));
+  max-width: none;
+  max-height: none;
+  pointer-events: none;
+}
+.login-right {
+  flex: 0 0 71%;
+  max-width: 71%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 32px;
+  min-width: 340px;
+
+  height: 71vh;
+  overflow: auto;
+}
+.login-nnpc-logo {
+  width: 147px;
+  margin-bottom: 0.5rem;
+  max-width: 90vw;
+}
+.login-nnpc-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a7c3a;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+.login-form-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 1);
+  text-align: left;
+  width: 100%;
+  max-width: 638px;
+  padding-left: 0;
+  font-family: "Montserrat", Bw, Arial, Helvetica, sans-serif;
+  letter-spacing: -2px;
+  /* aligns with input group */
+}
+.login-form {
+  width: 100%;
+  max-width: 638px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.login-input-group {
+  position: relative;
+  margin-bottom: 2.2rem;
+  width: 100%;
+  max-width: 638px;
+}
+
+.login-input-label {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.2rem;
+  background: #fff;
+  color: #757575;
+  font-size: 1.08rem;
+  padding: 0 0.3em;
+  z-index: 2;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  outline: none;
+  background: #fff;
+  color: #222;
+  font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  margin-top: 0;
+}
+
+.login-input:focus {
+  border-color: #287250;
+  background: #fff;
+}
+
+.login-input::placeholder {
+  color: transparent;
+}
+.login-form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.97rem;
+  margin-bottom: 0.2rem;
+  margin-top: 8px;
+}
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #555;
+}
+.login-forgot {
+  color: #1bb76e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.login-forgot:hover {
+  color: #0a7c3a;
+  text-decoration: underline;
+}
+.login-btn {
+  padding: 0.95rem 0;
+  background: linear-gradient(90deg, #0a7c3a 0%, #1bb76e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(27, 183, 110, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.login-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1bb76e 0%, #0a7c3a 100%);
+  box-shadow: 0 4px 16px rgba(27, 183, 110, 0.13);
+}
+.login-error {
+  background: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .login-3d-icon {
+    width: 350px;
+    height: 350px;
+    left: 55%;
+    top: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .login-root {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .login-left,
+  .login-right {
+    flex: unset;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .login-title {
+    margin-left: 0;
+    margin-top: 1.2rem;
+    font-size: 18px;
+    padding-top: 12px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+  }
+  .login-3d-icon {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 60vw;
+    height: auto;
+    max-width: 340px;
+    max-height: 32vh;
+    min-width: 120px;
+    min-height: 80px;
+    display: block;
+    background: none;
+    box-shadow: none;
+    z-index: 30;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .login-left {
+    background: rgba(40, 114, 80, 1);
+    padding-bottom: 0;
+    min-height: unset;
+    height: 32vh;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+  body,
+  html {
+    background: rgba(40, 114, 80, 1) !important;
+  }
+  .login-right {
+    padding: 16px 2vw;
+    align-items: flex-start;
+    height: auto;
+    min-height: 60vh;
+    border-radius: 32px 32px 0 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    margin-top: -24px;
+    z-index: 20;
+    background: #fff;
+    overflow: visible;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+  }
+  .login-form {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 2vw;
+  }
+  .login-input-group {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 2vw;
+    margin-bottom: 1rem;
+  }
+  .login-nnpc-logo {
+    display: none;
+  }
+  .login-form-title {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    padding-left: 0;
+    letter-spacing: -1px;
+    text-align: center;
+    width: 100%;
+  }
+  .login-form,
+  .login-input-group {
+    max-width: 100%;
+  }
+  .login-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+  }
+  .login-error {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem;
+  }
+}
+/* Extra small devices */
+@media (max-width: 600px) {
+  .login-title {
+    font-size: 15px;
+    padding-top: 8px;
+    margin-top: 0.7rem;
+  }
+  .login-3d-icon {
+    width: 90vw;
+    max-width: 220px;
+    min-width: 80px;
+    top: 28%;
+  }
+  .login-form-title {
+    font-size: 16px;
+    margin-bottom: 1.2rem;
+  }
+  .login-form,
+  .login-input-group {
+    padding: 0 1vw;
+  }
+  .login-btn {
+    font-size: 0.97rem;
+    padding: 0.8rem 0;
+  }
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

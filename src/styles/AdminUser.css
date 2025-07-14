@@ -1,0 +1,80 @@
+.adminuser-add-btn {
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #1bb76e 0%, #247150 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1bb76e33;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+
+.adminuser-modal-overlay {
+  z-index: 20000;
+}
+
+.adminuser-modal-content {
+  min-width: 350px;
+  max-width: 400px;
+}
+
+.adminuser-modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.adminuser-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.adminuser-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.adminuser-modal-btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.adminuser-create-btn {
+  flex: 1;
+}
+
+.adminuser-cancel-btn {
+  flex: 1;
+  background: #aaa !important;
+}
+
+.adminuser-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.18s;
+}
+
+.adminuser-edit-btn svg path {
+  stroke: #1bb76e;
+}
+
+.adminuser-delete-btn svg path,
+.adminuser-delete-btn svg rect {
+  stroke: #e53935;
+}
+
+.adminuser-delete-btn:last-child {
+  margin-right: 0;
+}
